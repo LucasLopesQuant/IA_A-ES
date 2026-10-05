@@ -1,0 +1,338 @@
+{
+  "acoes": [
+    "ABEV3",
+    "AMER3",
+    "ASAI3",
+    "B3SA3",
+    "BBAS3",
+    "BBDC3",
+    "BBDC4",
+    "BBSE3",
+    "BEEF3",
+    "BPAC11",
+    "BRKM5",
+    "CMIG4",
+    "COGN3",
+    "CPFE3",
+    "CSAN3",
+    "CSNA3",
+    "CVCB3",
+    "CYRE3",
+    "ELPL4",
+    "ENEV3",
+    "EQTL3",
+    "FIBR3",
+    "GFSA3",
+    "GGBR4",
+    "GOAU4",
+    "HAPV3",
+    "ITSA4",
+    "ITUB4",
+    "KLBN11",
+    "LIGT3",
+    "LREN3",
+    "MGLU3",
+    "MRVE3",
+    "MULT3",
+    "OGXP3",
+    "OIBR3",
+    "OIBR4",
+    "OSXB3",
+    "PCAR3",
+    "PDGR3",
+    "PETR3",
+    "PETR4",
+    "PRIO3",
+    "QUAL3",
+    "RADL3",
+    "RAIL3",
+    "RDOR3",
+    "RENT3",
+    "RSID3",
+    "SBSP3",
+    "SUZB3",
+    "TAEE11",
+    "TIMS3",
+    "TOTS3",
+    "UGPA3",
+    "USIM5",
+    "VALE3",
+    "VBBR3",
+    "VIVT3",
+    "WEGE3",
+    "YDUQ3"
+  ],
+  "janelas": 236761,
+  "features": [
+    "retorno",
+    "mm10",
+    "mm20",
+    "mm30",
+    "mme10",
+    "mme20",
+    "mme50",
+    "volatilidade",
+    "amplitude",
+    "volume",
+    "rsi14",
+    "ibov",
+    "ibov_mm20",
+    "dia_mes",
+    "dia_semana",
+    "mes",
+    "insider_compras_90d",
+    "insider_vendas_90d",
+    "insider_saldo_90d",
+    "insider_comprando",
+    "insider_coberto",
+    "n_noticias",
+    "noticias_30d",
+    "fatos_30d",
+    "sentimento",
+    "sentimento_5d"
+  ],
+  "horizonte": 1,
+  "janela": 30,
+  "periodo": [
+    "2008-01-02",
+    "2026-09-28"
+  ],
+  "corte_validacao": "2021-07-26",
+  "corte_teste": "2023-01-16",
+  "n_treino": 162409,
+  "n_validacao": 20980,
+  "n_teste": 53258,
+  "sempre_sobe_teste": 0.4771489729242555,
+  "insider_coberto_treino": 0.21112746214803366,
+  "dias_com_noticia": 0.09611427086520447,
+  "dias_com_insider_comprando": 0.10344061594947002,
+  "etapas": {
+    "1": {
+      "etapa": 1,
+      "nome": "com_resposta",
+      "extras": [
+        "alvo"
+      ],
+      "epocas_pedidas": 1,
+      "epocas_rodadas": 1,
+      "callback": false,
+      "acerto_treino_final": 1.0,
+      "acerto_validacao_final": 1.0,
+      "acerto_validacao_melhor": 1.0,
+      "acerto_teste": 0.9999624469563259,
+      "prob": {
+        "min": 3.2697527785785496e-05,
+        "max": 0.9999922513961792,
+        "media": 0.4754728674888611,
+        "acima_limiar": 25402,
+        "incerteza_media": 0.009697028435766697
+      },
+      "backtest": {
+        "dias": 923,
+        "inicio": "2023-01-16",
+        "fim": "2026-09-25",
+        "acoes_por_dia": 53.433369447453956,
+        "curvas": {
+          "modelo_top3": {
+            "multiplicador": 2720382.3324942333,
+            "retorno_aa": 56.12160151089632,
+            "vol_aa": 0.21602460909213841,
+            "pior_queda": -0.06664078075591029
+          },
+          "modelo_top3_custo": {
+            "multiplicador": 825030.3128362998,
+            "retorno_aa": 40.24116216623529,
+            "vol_aa": 0.21609165374027006,
+            "pior_queda": -0.06824078075591034
+          },
+          "modelo_limiar": {
+            "multiplicador": 3904964.8789013387,
+            "retorno_aa": 62.046567791008215,
+            "vol_aa": 0.1190920431599408,
+            "pior_queda": 0.0
+          },
+          "ibov": {
+            "multiplicador": 1.6755422889216471,
+            "retorno_aa": 0.15132920794357463,
+            "vol_aa": 0.1573454334936048,
+            "pior_queda": -0.1627025476071825
+          },
+          "cdi": {
+            "multiplicador": 1.5691444058816406,
+            "retorno_aa": 0.13089016435335465,
+            "vol_aa": 0.0008967041637660379,
+            "pior_queda": 0.0
+          }
+        },
+        "acerto_top3": 0.9953051643192489,
+        "acerto_uma_qualquer": 0.48648593848212657,
+        "dias_com_sinal": 922,
+        "sinais_total": 23985,
+        "giro_medio_dia": 1.6406644998194293,
+        "custo_lado": 0.0008,
+        "sorteio_1_por_dia": {
+          "media": 0.8683851966530277,
+          "faixa_1s": [
+            0.4129117943543044,
+            1.8262807216377508
+          ],
+          "faixa_3s": [
+            0.09335703317505092,
+            8.077515149310084
+          ],
+          "melhor": 7.224710058008435,
+          "pior": 0.10037397085028629,
+          "z_modelo": 20.120224417364145,
+          "percentil_modelo": 1.0
+        },
+        "sorteio_3_por_dia": {
+          "media": 1.0562492162636399,
+          "faixa_1s": [
+            0.6953464836955427,
+            1.6044697615038865
+          ],
+          "faixa_3s": [
+            0.3013498564999815,
+            3.702216486230921
+          ],
+          "melhor": 3.1520104931886306,
+          "pior": 0.2668643986297031,
+          "z_modelo": 35.308890546028174,
+          "percentil_modelo": 1.0
+        }
+      }
+    },
+    "2": {
+      "etapa": 2,
+      "nome": "sem_resposta",
+      "extras": [],
+      "epocas_pedidas": 1,
+      "epocas_rodadas": 1,
+      "callback": false,
+      "acerto_treino_final": 0.5251271442117059,
+      "acerto_validacao_final": 0.5113918017159199,
+      "acerto_validacao_melhor": 0.5113918017159199,
+      "acerto_teste": 0.5199218896691576
+    },
+    "3": {
+      "etapa": 3,
+      "nome": "fech_amanha",
+      "extras": [
+        "fech_amanha"
+      ],
+      "epocas_pedidas": 50,
+      "epocas_rodadas": 50,
+      "callback": false,
+      "acerto_treino_final": 0.9871993793638479,
+      "acerto_validacao_final": 0.9769780743565301,
+      "acerto_validacao_melhor": 0.9867969494756912,
+      "acerto_teste": 0.9707837320214804
+    },
+    "4": {
+      "etapa": 4,
+      "nome": "limpo_callback",
+      "extras": [],
+      "epocas_pedidas": 200,
+      "epocas_rodadas": 12,
+      "callback": true,
+      "acerto_treino_final": 0.5961986035686578,
+      "acerto_validacao_final": 0.5035271687321259,
+      "acerto_validacao_melhor": 0.5261677788369876,
+      "acerto_teste": 0.5217432122873559
+    },
+    "5": {
+      "etapa": 5,
+      "nome": "limpo_200",
+      "extras": [],
+      "epocas_pedidas": 200,
+      "epocas_rodadas": 200,
+      "callback": false,
+      "acerto_treino_final": 0.7356262391173175,
+      "acerto_validacao_final": 0.49814108674928503,
+      "acerto_validacao_melhor": 0.5261677788369876,
+      "acerto_teste": 0.5115851139734876,
+      "prob": {
+        "min": 0.0340450257062912,
+        "max": 0.9656892418861389,
+        "media": 0.46273964643478394,
+        "acima_limiar": 5658,
+        "incerteza_media": 0.12269201874732971
+      },
+      "backtest": {
+        "dias": 923,
+        "inicio": "2023-01-16",
+        "fim": "2026-09-25",
+        "acoes_por_dia": 53.433369447453956,
+        "curvas": {
+          "modelo_top3": {
+            "multiplicador": 0.30546485817875063,
+            "retorno_aa": -0.27659300411933585,
+            "vol_aa": 0.31831219627739427,
+            "pior_queda": -0.7481045413366271
+          },
+          "modelo_top3_custo": {
+            "multiplicador": 0.09178639073832467,
+            "retorno_aa": -0.4790274089967089,
+            "vol_aa": 0.3183607078253464,
+            "pior_queda": -0.9192696110529753
+          },
+          "modelo_limiar": {
+            "multiplicador": 0.564026396828246,
+            "retorno_aa": -0.14473817819007828,
+            "vol_aa": 0.19650719570719058,
+            "pior_queda": -0.4989447992376569
+          },
+          "ibov": {
+            "multiplicador": 1.6755422889216471,
+            "retorno_aa": 0.15132920794357463,
+            "vol_aa": 0.1573454334936048,
+            "pior_queda": -0.1627025476071825
+          },
+          "cdi": {
+            "multiplicador": 1.5691444058816406,
+            "retorno_aa": 0.13089016435335465,
+            "vol_aa": 0.0008967041637660379,
+            "pior_queda": 0.0
+          }
+        },
+        "acerto_top3": 0.49079089924160346,
+        "acerto_uma_qualquer": 0.48648593848212657,
+        "dias_com_sinal": 484,
+        "sinais_total": 5494,
+        "giro_medio_dia": 1.6247742867461175,
+        "custo_lado": 0.0008,
+        "sorteio_1_por_dia": {
+          "media": 0.8683851966530277,
+          "faixa_1s": [
+            0.4129117943543044,
+            1.8262807216377508
+          ],
+          "faixa_3s": [
+            0.09335703317505092,
+            8.077515149310084
+          ],
+          "melhor": 7.224710058008435,
+          "pior": 0.10037397085028629,
+          "z_modelo": -1.4054327286775021,
+          "percentil_modelo": 0.077
+        },
+        "sorteio_3_por_dia": {
+          "media": 1.0562492162636399,
+          "faixa_1s": [
+            0.6953464836955427,
+            1.6044697615038865
+          ],
+          "faixa_3s": [
+            0.3013498564999815,
+            3.702216486230921
+          ],
+          "melhor": 3.1520104931886306,
+          "pior": 0.2668643986297031,
+          "z_modelo": -2.9675583887296124,
+          "percentil_modelo": 0.002
+        }
+      }
+    }
+  },
+  "minutos": 65.4
+}

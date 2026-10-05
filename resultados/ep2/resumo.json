@@ -1,0 +1,234 @@
+{
+  "acoes": [
+    "ABEV3",
+    "AMER3",
+    "ASAI3",
+    "B3SA3",
+    "BBAS3",
+    "BBDC3",
+    "BBDC4",
+    "BBSE3",
+    "BEEF3",
+    "BPAC11",
+    "BRKM5",
+    "CMIG4",
+    "COGN3",
+    "CPFE3",
+    "CSAN3",
+    "CSNA3",
+    "CVCB3",
+    "CYRE3",
+    "ELPL4",
+    "ENEV3",
+    "EQTL3",
+    "FIBR3",
+    "GFSA3",
+    "GGBR4",
+    "GOAU4",
+    "HAPV3",
+    "ITSA4",
+    "ITUB4",
+    "KLBN11",
+    "LIGT3",
+    "LREN3",
+    "MGLU3",
+    "MRVE3",
+    "MULT3",
+    "OGXP3",
+    "OIBR3",
+    "OIBR4",
+    "OSXB3",
+    "PCAR3",
+    "PDGR3",
+    "PETR3",
+    "PETR4",
+    "PRIO3",
+    "QUAL3",
+    "RADL3",
+    "RAIL3",
+    "RDOR3",
+    "RENT3",
+    "RSID3",
+    "SBSP3",
+    "SUZB3",
+    "TAEE11",
+    "TIMS3",
+    "TOTS3",
+    "UGPA3",
+    "USIM5",
+    "VALE3",
+    "VBBR3",
+    "VIVT3",
+    "WEGE3",
+    "YDUQ3"
+  ],
+  "janelas": 236517,
+  "features": [
+    "retorno",
+    "mm10",
+    "mm20",
+    "mm30",
+    "mme10",
+    "mme20",
+    "mme50",
+    "volatilidade",
+    "amplitude",
+    "volume",
+    "rsi14",
+    "ibov",
+    "ibov_mm20",
+    "dia_mes",
+    "dia_semana",
+    "mes",
+    "insider_compras_90d",
+    "insider_vendas_90d",
+    "insider_saldo_90d",
+    "insider_comprando",
+    "insider_coberto",
+    "n_noticias",
+    "noticias_30d",
+    "fatos_30d",
+    "sentimento",
+    "sentimento_5d",
+    "atr14",
+    "ehlers_ss",
+    "ehlers_roofing"
+  ],
+  "horizonte": 5,
+  "janela": 30,
+  "periodo": [
+    "2008-01-02",
+    "2026-09-28"
+  ],
+  "corte_validacao": "2021-07-21",
+  "corte_teste": "2023-01-11",
+  "n_treino": 161998,
+  "n_validacao": 20747,
+  "n_teste": 53197,
+  "episodio": 2,
+  "alvo": "retorno",
+  "meia_vida": 3.0,
+  "sempre_sobe_teste": 0.4900652292422505,
+  "insider_coberto_treino": 0.20920011358164917,
+  "dias_com_noticia": 0.09611427086520447,
+  "dias_com_insider_comprando": 0.10344061594947002,
+  "etapas": {
+    "4": {
+      "etapa": 4,
+      "nome": "limpo_callback",
+      "extras": [],
+      "epocas_pedidas": 200,
+      "epocas_rodadas": 15,
+      "callback": true,
+      "acerto_treino_final": 0.5682495787063043,
+      "acerto_validacao_final": 0.46893526774955413,
+      "acerto_validacao_melhor": 0.47052585916036055,
+      "acerto_teste": 0.5107618850687069,
+      "previsto": {
+        "min": -0.20012924075126648,
+        "max": 0.16807317733764648,
+        "positivos": 0.7298343891572833,
+        "incerteza_media": 0.004618453793227673
+      },
+      "backtest": {
+        "dias": 922,
+        "inicio": "2023-01-11",
+        "fim": "2026-09-21",
+        "horizonte": 5,
+        "rebalanceamentos": 185,
+        "acoes_por_dia": 53.439262472885034,
+        "curvas": {
+          "modelo_top3": {
+            "multiplicador": 0.2541125203201786,
+            "retorno_aa": -0.3123263321342159,
+            "vol_aa": 0.4048402584436684,
+            "pior_queda": -0.8328419095024312
+          },
+          "modelo_top3_custo": {
+            "multiplicador": 0.21731404366631624,
+            "retorno_aa": -0.34110898799353195,
+            "vol_aa": 0.4049160496465281,
+            "pior_queda": -0.8537540335205358
+          },
+          "ibov": {
+            "multiplicador": 1.6769682274097848,
+            "retorno_aa": 0.15177294943401098,
+            "vol_aa": 0.15753715418862335,
+            "pior_queda": -0.1627025476071825
+          },
+          "cdi": {
+            "multiplicador": 1.568347873363717,
+            "retorno_aa": 0.13088409510582433,
+            "vol_aa": 0.0008971319350153156,
+            "pior_queda": 0.0
+          }
+        },
+        "acerto_top3": 0.43783783783783786,
+        "acerto_uma_qualquer": 0.5047541978555533,
+        "rebalanceamentos_com_positivo": 185,
+        "positivos_medio": 39.30810810810811,
+        "giro_por_rebalanceamento": 1.054054054054054,
+        "giro_medio_dia": 0.21149674620390455,
+        "custo_lado": 0.0008,
+        "sorteio_1_por_dia": {
+          "media": 0.8767956945071129,
+          "faixa_1s": [
+            0.39428889666169614,
+            1.949764998241438
+          ],
+          "faixa_3s": [
+            0.07973460092417083,
+            9.641619585420973
+          ],
+          "melhor": 9.851038497868755,
+          "pior": 0.04090667498481473,
+          "z_modelo": -1.549689873401509,
+          "percentil_modelo": 0.063
+        },
+        "sorteio_3_por_dia": {
+          "media": 1.0676707781821764,
+          "faixa_1s": [
+            0.6863588393625434,
+            1.6608235010753807
+          ],
+          "faixa_3s": [
+            0.28364751345707034,
+            4.018793877975101
+          ],
+          "melhor": 3.508139454861002,
+          "pior": 0.2138654719990678,
+          "z_modelo": -3.2488607089333708,
+          "percentil_modelo": 0.001
+        }
+      },
+      "importancia_top5": [
+        {
+          "informacao": "amplitude",
+          "aumento_perda": 0.054094512312430565,
+          "aumento_pct": 0.03935667544254985
+        },
+        {
+          "informacao": "mm30",
+          "aumento_perda": 0.019230260869973703,
+          "aumento_pct": 0.013991052019544776
+        },
+        {
+          "informacao": "mm20",
+          "aumento_perda": 0.01890991607917858,
+          "aumento_pct": 0.013757983905570153
+        },
+        {
+          "informacao": "rsi14",
+          "aumento_perda": 0.014533678051188215,
+          "aumento_pct": 0.01057403469585738
+        },
+        {
+          "informacao": "dia_mes",
+          "aumento_perda": 0.013643269467439323,
+          "aumento_pct": 0.009926214424561342
+        }
+      ]
+    }
+  },
+  "minutos": 4.5
+}

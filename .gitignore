@@ -1,0 +1,9 @@
+.env
+__pycache__/
+# o baixar.py refaz tudo em dados/, menos o histórico de quem saiu da bolsa
+dados/*
+!dados/deslistadas.csv
+# grandes, o experimento.py refaz
+resultados/*/previsoes_*.csv
+resultados/*/sorteio*_amostra.csv
+resultados/*/run*.log
